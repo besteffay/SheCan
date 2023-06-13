@@ -11,13 +11,10 @@ GameObject:
   - component: {fileID: 3565936352915841924}
   - component: {fileID: 5912614626928939138}
   - component: {fileID: 7941035239784833051}
-  - component: {fileID: 2642881924650336045}
-  - component: {fileID: 6372475263069742953}
   - component: {fileID: 7898372249646322887}
-  - component: {fileID: 4559800754088827347}
-  - component: {fileID: 2558278451569533408}
+  - component: {fileID: 3377019957687168478}
   m_Layer: 0
-  m_Name: Astronaut_Player
+  m_Name: NPC_Mother
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1353741708, guid: 0d15ff47d9e33e441870b2b440f45788, type: 3}
+  m_Sprite: {fileID: 335054012, guid: 83a45afea6c45a548ad5fe77b1a89a0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3643550586170186552}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -117,46 +114,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2642881924650336045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643550586170186552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82865002007cc9641973d057b2f35f37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  casualController: {fileID: 9100000, guid: 743e8b57a30d78848a142caaf43f52ee, type: 2}
-  powerUpController: {fileID: 9100000, guid: f0d578e6c1adfc54a9c710b090954c09, type: 2}
-  jumpableGround:
-    serializedVersion: 2
-    m_Bits: 64
-  jumpForce: 14
-  walkSpeed: 5
---- !u!95 &6372475263069742953
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643550586170186552}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 743e8b57a30d78848a142caaf43f52ee, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &7898372249646322887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -193,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4, y: 1}
+    oldSize: {x: 0.31, y: 1.03}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -202,28 +159,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17869473, y: 0.91021955}
   m_EdgeRadius: 0
---- !u!114 &4559800754088827347
-MonoBehaviour:
+--- !u!95 &3377019957687168478
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3643550586170186552}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081c2e6646bc7234a83830d39221be4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemsCollected: 0
---- !u!114 &2558278451569533408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643550586170186552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607e1f2cfa0b7704189424511ba3cca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 11a8dcf326a275f4aac9d3d056a8c7e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

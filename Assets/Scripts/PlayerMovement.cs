@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private BoxCollider2D coll;
 
+    public RuntimeAnimatorController casualController;
+    public RuntimeAnimatorController powerUpController;
+
     [SerializeField] private LayerMask jumpableGround;
 
     [SerializeField] private float jumpForce = 13f;
@@ -67,6 +70,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetInteger("state", (int)state);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("PowerItem"))
+        {
+            anim.runtimeAnimatorController = powerUpController as RuntimeAnimatorController;
+        }
     }
 
     private bool IsGrounded()

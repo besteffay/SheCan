@@ -14,7 +14,7 @@ public class ItemCollector : MonoBehaviour
             
             if(collision.gameObject.CompareTag("PowerItem"))
             {
-                powerItemCollected = true;
+                powerItemCollected = true; 
             }
 
             Destroy(collision.gameObject);
