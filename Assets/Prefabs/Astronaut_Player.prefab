@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2642881924650336045}
   - component: {fileID: 6372475263069742953}
   - component: {fileID: 7898372249646322887}
+  - component: {fileID: 4559800754088827347}
   m_Layer: 0
   m_Name: Astronaut_Player
   m_TagString: Player
@@ -198,3 +199,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17869473, y: 0.91021955}
   m_EdgeRadius: 0
+--- !u!114 &4559800754088827347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3643550586170186552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081c2e6646bc7234a83830d39221be4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
