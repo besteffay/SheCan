@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown("space") && IsGrounded())                                                                   // jump
+        if(Input.GetKeyDown("space") && IsGrounded())                                                   // jump
         {
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, jumpForce);
         }
