@@ -8,10 +8,12 @@ public class FinishCheckpoint : MonoBehaviour
     private AudioSource finishSound;
     private bool levelCompleted = false;
     [SerializeField] private GameObject winCanvas;
+    private Rigidbody2D player;
   
     private void Start()
     {
         finishSound = GetComponent<AudioSource>();
+        player = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,6 +49,7 @@ public class FinishCheckpoint : MonoBehaviour
         }
 
         winCanvas.SetActive(true);
+        player.bodyType = RigidbodyType2D.Static;
         Invoke("MainMenuLoad", 5f);
     }
 
