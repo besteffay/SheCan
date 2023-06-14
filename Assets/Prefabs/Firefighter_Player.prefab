@@ -139,7 +139,7 @@ MonoBehaviour:
     m_Bits: 64
   jumpForce: 14
   walkSpeed: 5
-  newJumpForce: 18
+  newJumpForce: 20
   newGravityScale: 2
   jumpSound: {fileID: 3819021484462867801}
   powerUpSound: {fileID: 2759223017820797330}
