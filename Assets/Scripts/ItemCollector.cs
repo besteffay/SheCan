@@ -6,6 +6,13 @@ public class ItemCollector : MonoBehaviour
 {
     public int itemsCollected = 0;
     private bool powerItemCollected = false;
+    public GameObject finishCheckpoint;
+    private BoxCollider2D finishCollider;
+
+    private void Start()
+    {
+        finishCollider = finishCheckpoint.GetComponent<BoxCollider2D>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +21,8 @@ public class ItemCollector : MonoBehaviour
             
             if(collision.gameObject.CompareTag("PowerItem"))
             {
-                powerItemCollected = true; 
+                powerItemCollected = true;
+                Debug.Log("power item collected");
             }
 
             Destroy(collision.gameObject);
@@ -23,4 +31,15 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(itemsCollected>=4)
+        {
+            finishCollider.enabled = true;
+        }
+        else
+        {
+            finishCollider.enabled = false;
+        }
+    }
 }
