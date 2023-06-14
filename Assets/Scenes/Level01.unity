@@ -376,7 +376,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Congrats! \r\nYou are now one of \nthe bestAstronauts \nin The World !"
+  m_text: "Congrats! \r\nYou are now one of \nthe best Astronauts \nin The World
+    !"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea5855b14a916ef498fd9b8257c7cb11, type: 2}
   m_sharedMaterial: {fileID: 7269588957313345731, guid: ea5855b14a916ef498fd9b8257c7cb11, type: 2}
@@ -736,7 +737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &548393677
 MonoBehaviour:
   m_ObjectHideFlags: 0
