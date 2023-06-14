@@ -555,7 +555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413789417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4094574, y: -0.101286806, z: -0.041745197}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2586,10 +2586,6 @@ PrefabInstance:
     - target: {fileID: 3643550586170186552, guid: a644476138a077441b88ee03b947d264, type: 3}
       propertyPath: m_Name
       value: Astronaut_Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3643550586170186552, guid: a644476138a077441b88ee03b947d264, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4559800754088827347, guid: a644476138a077441b88ee03b947d264, type: 3}
       propertyPath: finishCollider

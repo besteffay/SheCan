@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,9 +17,14 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float jumpForce = 13f;
     [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float newJumpForce = 18f;
+    [SerializeField] private float newGravityScale = 2f;
     private float dirX = 0f;
 
     private enum MovementState {idle, walking, jumping, falling};
+
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource powerUpSound;
 
     private void Start()
     {
@@ -32,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown("space") && IsGrounded())                                                   // jump
         {
+            jumpSound.Play();
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, jumpForce);
         }
 
@@ -76,7 +83,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("PowerItem"))
         {
+            powerUpSound.Play();
             anim.runtimeAnimatorController = powerUpController as RuntimeAnimatorController;
+            if(SceneManager.GetActiveScene().name == "Level01")
+            {
+                playerRigidbody.gravityScale = newGravityScale;
+            }
+            else if(SceneManager.GetActiveScene().name == "Level02" || SceneManager.GetActiveScene().name == "Test")
+            {
+                jumpForce = newJumpForce;
+            }
         }
     }
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemCollector : MonoBehaviour
 {
     public int itemsCollected = 0;
-    private bool powerItemCollected = false;
     public GameObject finishCheckpoint;
     private BoxCollider2D finishCollider;
 
@@ -18,13 +17,6 @@ public class ItemCollector : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("CollectableItem") || collision.gameObject.CompareTag("PowerItem"))
         {
-            
-            if(collision.gameObject.CompareTag("PowerItem"))
-            {
-                powerItemCollected = true;
-                Debug.Log("power item collected");
-            }
-
             Destroy(collision.gameObject);
             itemsCollected++;
             Debug.Log(itemsCollected);
