@@ -977,6 +977,67 @@ RectTransform:
   m_AnchoredPosition: {x: 105.48943, y: -30.567497}
   m_SizeDelta: {x: 345.37885, y: 283.66498}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &432271850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578591769157025382, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575136355623061189, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
+      propertyPath: m_Name
+      value: GameController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6a6cbe7297fc944ba708ee99293db9f, type: 3}
 --- !u!1 &473901602
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,6 +3185,7 @@ GameObject:
   - component: {fileID: 1452361621}
   - component: {fileID: 1452361620}
   - component: {fileID: 1452361619}
+  - component: {fileID: 1452361623}
   m_Layer: 5
   m_Name: ChooseCanvas
   m_TagString: Untagged
@@ -3221,6 +3283,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1452361623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452361618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3beea36f50c97449b6bf3342f86f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astronautPortrait: {fileID: 496158540}
+  firefighterPortrait: {fileID: 2047544284}
+  astronautHelmetPortrait: {fileID: 21300000, guid: e420e0ea3e92d1c4dba7417071554f6c, type: 3}
+  firefightertHelmetPortrait: {fileID: 21300000, guid: f295270158c48a342b81046ce4b55126, type: 3}
 --- !u!1 &1465968628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,9 +3357,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Our Game focuse women who want to work in\n male-dominated industries
-    where women are\n still a minority. The character stories inspired \nby real
-    women.\r\nYou will help her completing a short platformer\n level overcoming
+  m_text: "Our game focuses on women who want to work in\n male-dominated industries
+    where women are\n still a minority. The character stories are inspired \nby real
+    women.\r\nYou will help a woman complete a short platformer\n level overcoming
     different challenges that she\n faced on her way to success. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea5855b14a916ef498fd9b8257c7cb11, type: 2}
@@ -4272,7 +4350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047544281}
   - component: {fileID: 2047544283}
-  - component: {fileID: 2047544282}
+  - component: {fileID: 2047544284}
   m_Layer: 5
   m_Name: Portrait
   m_TagString: Untagged
@@ -4289,7 +4367,7 @@ RectTransform:
   m_GameObject: {fileID: 2047544280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3.9999998, y: 3.9999998, z: 3.9999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1312382512}
@@ -4297,10 +4375,18 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.1, y: 24.9}
+  m_AnchoredPosition: {x: 3.1, y: 26.7}
   m_SizeDelta: {x: 54, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2047544282
+--- !u!222 &2047544283
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047544280}
+  m_CullTransparentMesh: 1
+--- !u!114 &2047544284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4330,14 +4416,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &2047544283
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047544280}
-  m_CullTransparentMesh: 1
 --- !u!1 &2060803382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4606,6 +4684,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1559717829705888164, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
     - target: {fileID: 2131398810900654163, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4698,6 +4780,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3228858601885418601, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500283957700032908, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959235466357422655, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
     - target: {fileID: 5191550605354322975, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
       propertyPath: AboutCanvas
       value: 
@@ -4717,6 +4811,10 @@ PrefabInstance:
     - target: {fileID: 6517517077904726196, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234656550963995087, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.999998
       objectReference: {fileID: 0}
     - target: {fileID: 7766631335679805940, guid: 8c69094bef8e8b343981825c7e9fa009, type: 3}
       propertyPath: m_Sprite

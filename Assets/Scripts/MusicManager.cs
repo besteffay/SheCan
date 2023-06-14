@@ -4,11 +4,26 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
+    public static MusicManager musicManager;
     public AudioSource _audioSource;
+
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+       
+        //DontDestroyOnLoad(transform.gameObject);
+
+        if(musicManager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            musicManager = this;
+        }
+        else if(musicManager != this)
+        {
+            Destroy(gameObject);
+        }
+
         _audioSource = GetComponent<AudioSource>();
+
     }
 
     public void PlayMusic()

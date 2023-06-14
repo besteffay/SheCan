@@ -7,6 +7,7 @@ public class FinishCheckpoint : MonoBehaviour
 {
     private AudioSource finishSound;
     private bool levelCompleted = false;
+    [SerializeField] private GameObject winCanvas;
   
     private void Start()
     {
@@ -44,7 +45,13 @@ public class FinishCheckpoint : MonoBehaviour
             GameControl.control.firefighterFinished = true;
             Debug.Log("test finished");
         }
- 
+
+        winCanvas.SetActive(true);
+        Invoke("MainMenuLoad", 5f);
+    }
+
+    private void MainMenuLoad()
+    {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }
